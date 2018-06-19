@@ -16,18 +16,25 @@ void SysTick_Handler(void) {
 	// incremento la variable contador para el delay
 	j++;
 
-	// incremento la variable contador para cambiar de estado
-//	i++;
-	//Cambio de ciclo cada 3 segundos
-//	if(i==3000){
-//		//reseteo los contadores
-//		i=0;
-//		j=0;
-//		// incremento el ciclo
-//		ciclo++;
-//		if(ciclo==4)ciclo=0;
-//		}
+#if defined(PULSADOR_IRQ)
+
 	if(pulsador_tick>0){
 		pulsador_tick--;
 	}
+#else
+	// incremento la variable contador para cambiar de estado
+	i++;
+	//Cambio de ciclo cada 3 segundos
+	if(i==3000){
+		//reseteo los contadores
+		i=0;
+		j=0;
+		// incremento el ciclo
+		ciclo++;
+		if(ciclo==4)ciclo=0;
+		}
+#endif
+
+
+
 }

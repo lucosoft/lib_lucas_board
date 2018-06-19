@@ -11,8 +11,6 @@
 /*****************************************************************************
  * Private types/enumerations/variables
  ****************************************************************************/
-//#define TICKRATE_HZ1 (1000)	// 1000 ticks per second
-
 /* GPIO pin for interrupt */
 #define GPIO_INTERRUPT_PIN     17	/* GPIO pin number mapped to interrupt */
 #define GPIO_INTERRUPT_PORT    GPIOINT_PORT0	/* GPIO port number mapped to interrupt */
@@ -31,11 +29,6 @@
 #define PB_PORT			GPIOINT_PORT0		// Puerto del pulsador
 #define PB_BIT			GPIO_INTERRUPT_PIN	// Bit del pulsador
 #define DELAY_PULSADOR	30					// Tiempo de espera de finalizacion del transitorio del pulsador [ms]
-
-//// Variables
-//volatile int j=0;							// contador para el delay del parpadeo
-//volatile int i=0;       					// contador para cambiar de estado
-//volatile int ciclo = 0;  					// nro de ciclo
 
 volatile int pulsador = NO;  				// estado de pulsador
 volatile int estado_pulsador = NO;  		// estado de pulsador
@@ -84,6 +77,7 @@ void Pulsador_Irq_Init(void)
 }
 
 void Pulsador_Irq_Sec(void) {
+
 	switch (estado_pulsador) {
 
 	case NO_OPRIMIDO:
@@ -159,30 +153,3 @@ void Pulsador_Irq_Sec(void) {
 		pulsador = NO;					// Normalizo pulsador
 	}
 }
-
-
-
-/**
- * @brief	Handle interrupt from SysTick timer
- * @return	Nothing
- */
-//void SysTick_Handler(void) {
-//
-//	// incremento la variable contador para el delay
-//	j++;
-//
-//	// incremento la variable contador para cambiar de estado
-////	i++;
-//	//Cambio de ciclo cada 3 segundos
-////	if(i==3000){
-////		//reseteo los contadores
-////		i=0;
-////		j=0;
-////		// incremento el ciclo
-////		ciclo++;
-////		if(ciclo==4)ciclo=0;
-////		}
-//	if(pulsador_tick>0){
-//		pulsador_tick--;
-//	}
-//}
