@@ -9,8 +9,10 @@ Funciones incluidas:
 - Parpadeo por pulsador irq (si esta definida PULSADOR_IRQ en Defined Symbols)
 - Lectura y escritura en eeprom
 - Manejo de display 1602
-- RTC interno de lpc1769  
+- RTC interno de lpc1769
+- Manejo de teclado matricial  
 
 Funciones a incluir:
 
+- Testeo de todas las funciones incluidas
 - Corto digital (ADC-DAC)
