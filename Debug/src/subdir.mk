@@ -4,16 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/i2c_eeprom.c \
 ../src/parpadeo.c \
 ../src/pulsador_irq.c \
 ../src/systick.c 
 
 OBJS += \
+./src/i2c_eeprom.o \
 ./src/parpadeo.o \
 ./src/pulsador_irq.o \
 ./src/systick.o 
 
 C_DEPS += \
+./src/i2c_eeprom.d \
 ./src/parpadeo.d \
 ./src/pulsador_irq.d \
 ./src/systick.d 
