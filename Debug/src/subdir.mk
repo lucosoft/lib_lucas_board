@@ -8,6 +8,7 @@ C_SRCS += \
 ../src/i2c_eeprom.c \
 ../src/parpadeo.c \
 ../src/pulsador_irq.c \
+../src/rtc_interno.c \
 ../src/systick.c 
 
 OBJS += \
@@ -15,6 +16,7 @@ OBJS += \
 ./src/i2c_eeprom.o \
 ./src/parpadeo.o \
 ./src/pulsador_irq.o \
+./src/rtc_interno.o \
 ./src/systick.o 
 
 C_DEPS += \
@@ -22,6 +24,7 @@ C_DEPS += \
 ./src/i2c_eeprom.d \
 ./src/parpadeo.d \
 ./src/pulsador_irq.d \
+./src/rtc_interno.d \
 ./src/systick.d 
 
 
