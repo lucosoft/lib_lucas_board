@@ -7,8 +7,10 @@ Funciones incluidas:
 
 - Parpadeo por tiempo (si no esta definida PULSADOR_IRQ en Defined Symbols)
 - Parpadeo por pulsador irq (si esta definida PULSADOR_IRQ en Defined Symbols)
+- Lectura y escritura en eeprom
+- Manejo de display 1602
 
 Funciones a incluir:
 
-- Lectura y escritura en eeprom
+- RTC interno de lpc1769  
 - Corto digital (ADC-DAC)
