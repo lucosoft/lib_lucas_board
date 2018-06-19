@@ -9,7 +9,8 @@ C_SRCS += \
 ../src/parpadeo.c \
 ../src/pulsador_irq.c \
 ../src/rtc_interno.c \
-../src/systick.c 
+../src/systick.c \
+../src/teclado_matricial.c 
 
 OBJS += \
 ./src/display_1602.o \
@@ -17,7 +18,8 @@ OBJS += \
 ./src/parpadeo.o \
 ./src/pulsador_irq.o \
 ./src/rtc_interno.o \
-./src/systick.o 
+./src/systick.o \
+./src/teclado_matricial.o 
 
 C_DEPS += \
 ./src/display_1602.d \
@@ -25,7 +27,8 @@ C_DEPS += \
 ./src/parpadeo.d \
 ./src/pulsador_irq.d \
 ./src/rtc_interno.d \
-./src/systick.d 
+./src/systick.d \
+./src/teclado_matricial.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
